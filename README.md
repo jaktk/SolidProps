@@ -1,4 +1,4 @@
-# SolidProps package for calculating the properties of solids
+# SolidProps - calculating the properties of solids
 
 SolidProps is a simple library allowing to calculate the temperature-dependent properties of solids
 used for the mechanical and thermal design of cooling and cryogenic systems.
