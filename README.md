@@ -46,11 +46,7 @@ The supported materials are listed below. The names in brackets can be used to i
 
 Clone the remote repository to local with: `git clone https://github.com/JakubTk/SolidProps`
 
-Install the repository with:
-```
-cd SolidProps
-python setup.py install
-```
+From inside the repository call `python setup.py install`.
 
 To remove the repository run: `pip uninstall SolidProps` and delete the local repository from your system.
 

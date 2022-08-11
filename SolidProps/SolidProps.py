@@ -58,16 +58,23 @@ class SolidProps(object):
     def _get_interpolator(self, prop):
         return interpolate.interp1d(self.df['T/K'], self.df[prop])
 
+    def check_T_in_range(self, T):
+        assert T >= 1.0, f"Temperature {T} K below the 1 K limit"
+        assert T <= 300.0, f"Temperature {T} K above the 300 K limit"
+
     def get_rhomass(self, T=200):
         """ return density in (kg/m^3) """
+        self.check_T_in_range(T)
         return float(self.df['rho/(kg/m3)'][0])
 
     def get_K(self, T):
         """ return thermal conductivity in (W/(m.K)) """
+        self.check_T_in_range(T)
         return float(self.interp_K(T))
 
     def get_cp(self, T):
         """ return specific heat in (J/(kg.K)) """
+        self.check_T_in_range(T)
         return float(self.interp_cp(T))
 
     def get_cv(self, T):
@@ -79,12 +86,15 @@ class SolidProps(object):
 
     def get_thermal_expansion_coefficient(self, T):
         """ return thermal expansion coefficient in (1/K) """
+        self.check_T_in_range(T)
         return float(self.interp_alpha_th(T))
 
     def get_thermal_diffusivity(self, T):
         """ return thermal diffusivity in (m^2/s) """
+        self.check_T_in_range(T)
         return self.get_K(T) / self.get_rhomass() / self.get_cp(T)
 
     def get_electrical_resistivity(self, T):
         """ return resistivity in (ohm.m) """
+        self.check_T_in_range(T)
         return float(self.interp_elec_resistivity(T))
