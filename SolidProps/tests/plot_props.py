@@ -68,9 +68,9 @@ def main():
     ax0.set_ylabel(r'$\rho~/~{\rm kg~m^{-3}}$')
     ax1.set_ylabel(r'$k~/~{\rm W~(m~K)^{-1}}$')
     ax2.set_ylabel(r'$c_{\rm p}~/~{\rm J~(kg~K)^{-1}}$')
-    ax3.set_ylabel(r'$\alpha~/~{\rm 10^{-6}~K^{-1}}$')
+    ax3.set_ylabel(r'$\alpha~/~{\rm K^{-1}}$')
     ax4.set_ylabel(r'$\alpha_{\rm th}~/~{\rm m^2~s^{-1}}$')
-    ax5.set_ylabel(r'$\rho~/~{\rm \Omega~m}$')
+    ax5.set_ylabel(r'$\rho_{\rm el}~/~{\rm \Omega~m}$')
 
     ax4.set_yticks([-1e-2, 0, 1e-2])
 

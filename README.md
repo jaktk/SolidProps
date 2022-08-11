@@ -54,19 +54,19 @@ To remove the repository run: `pip uninstall SolidProps` and delete the local re
 
 The library is a simple class with only a few methods:
 
-`get_rhomass()` returns meterial density in ${\rm kg~m^{-3}}$
+`get_rhomass()` returns meterial density $\rho$ in ${\rm kg~m^{-3}}$
 
-`get_K(T)` returns thermal conductivity in ${\rm W~(m~K)^{-1}}$
+`get_K(T)` returns thermal conductivity $k$ in ${\rm W~(m~K)^{-1}}$
 
-`get_cp(T)` returns specific heat in ${\rm J~(kg~K)^{-1}}$
+`get_cp(T)` returns specific heat $c_{\rm p}$ in ${\rm J~(kg~K)^{-1}}$
 
-`get_cv(T)` returns specific heat in ${\rm J~(kg~K)^{-1}}$
+`get_cv(T)` returns specific heat $c_{\rm v}$ in ${\rm J~(kg~K)^{-1}}$
 
-`get_thermal_expansion_coefficient(T)` returns thermal expansion coefficient in ${\rm K^{-1}}$
+`get_thermal_expansion_coefficient(T)` returns thermal expansion coefficient $\alpha$ in ${\rm K^{-1}}$
 
-`get_thermal_diffusivity(T)` returns thermal diffusivity in ${\rm m^2~s^{-1}}$
+`get_thermal_diffusivity(T)` returns thermal diffusivity $\alpha_{\rm th}$ in ${\rm m^2~s^{-1}}$
 
-`get_electrical_resistivity(T)` returns electrical resistivity in ${\rm \Omega~m}$
+`get_electrical_resistivity(T)` returns electrical resistivity $\rho_{\rm el}$ in ${\rm \Omega~m}$
 
 All methods but the density calculations take the absolute temperature (in Kelvins) as an input.
 
