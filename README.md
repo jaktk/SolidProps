@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/523364154.svg)](https://zenodo.org/badge/latestdoi/523364154)
+
 # SolidProps - calculating the properties of solids
 
 SolidProps is a simple library allowing to calculate the temperature-dependent properties of solids
