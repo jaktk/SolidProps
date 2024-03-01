@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "To cite this repository, use:"
+license: CC-BY-4.0
+doi: 10.5281/zenodo.8019852
+title: "SolidProps - calculating the properties of solids"
+date-released: "2024-03-01"
+type: dataset
+authors:
+  - family-names: Tkaczuk
+    given-names: Jakub
+    email: jakub.tkaczuk@gmail.com
+    orcid: https://orcid.org/0000-0001-7997-9423
+contact:
+  - family-names: Tkaczuk
+    given-names: Jakub
+    email: jakub.tkaczuk@gmail.com
+    orcid: https://orcid.org/0000-0001-7997-9423
+version: 0.0.2
