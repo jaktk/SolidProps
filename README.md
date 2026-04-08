@@ -1,11 +1,10 @@
 [![DOI](https://zenodo.org/badge/523364154.svg)](https://zenodo.org/badge/latestdoi/523364154)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # SolidProps - calculating the properties of solids
 
 SolidProps is a simple library allowing to calculate the temperature-dependent properties of solids
 used for the mechanical and thermal design of cooling and cryogenic systems.
-
-The package lives here: https://github.com/JakubTk/SolidProps
 
 This package allows calculating the following material properties of solids for temperatures from 1 to 300 K:
 - density in ${\rm kg~m^{-3}}$
