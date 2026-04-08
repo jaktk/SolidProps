@@ -71,6 +71,18 @@ class SolidProps(object):
     def _get_interpolator(self, prop):
         return interpolate.interp1d(self.df['T/K'], self.df[prop])
 
+    @staticmethod
+    def units():
+        """ return a dictionary of property units """
+        return {
+            'density': 'kg/m^3',
+            'thermal_conductivity': 'W/(m.K)',
+            'specific_heat': 'J/(kg.K)',
+            'thermal_expansion_coefficient': '1/K',
+            'thermal_diffusivity': 'm^2/s',
+            'electrical_resistivity': 'ohm.m',
+        }
+
     def check_T_in_range(self, T):
         assert T >= 1.0, f"Temperature {T} K below the 1 K limit"
         assert T <= 300.0, f"Temperature {T} K above the 300 K limit"
