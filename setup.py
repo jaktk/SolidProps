@@ -5,7 +5,7 @@ from setuptools import find_packages
 
 setup(
     name='SolidProps',
-    version='1.0',
+    version='1.1',
     description='Library for calculating the thermodynamic properties of solids at temperatures from 1 to 300 K.',
     long_description=open('README.md').read(),
     author='Jakub Tkaczuk',
