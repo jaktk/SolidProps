@@ -13,9 +13,9 @@ def main():
     for material in materials:
         SP = SolidProps(material)
         print(f'{material}')
-        print(f'molar density                 : {SP.get_rhomass():.2f} kg/m^3')
+        print(f'mass density                  : {SP.get_rhomass():.2f} kg/m^3')
         print(f'thermal conductivity          : {SP.get_K(T):.2f} W/(m.K)')
-        print(f'specific heat                 : {SP.get_cp(T):.2f} kg/m^3')
+        print(f'specific heat                 : {SP.get_cp(T):.2f} J/(kg.K)')
         print(f'thermal expansion coefficient : {SP.get_thermal_expansion_coefficient(T):.2e} 1/K')
         print(f'thermal diffusivity           : {SP.get_thermal_diffusivity(T):.2e} m^2/s')
         print(f'electrical resistivity        : {SP.get_electrical_resistivity(T):.2e} ohm.m\n')
