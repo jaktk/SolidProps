@@ -56,47 +56,14 @@ pip install .
 
 To remove the package: `pip uninstall SolidProps`
 
-## Tutorial
+## Usage
 
-### Quick start with convenience functions
-
-The simplest way to use SolidProps is through the module-level convenience functions.
-Each function takes a material name and temperature (in Kelvin) as arguments:
-
-```python
-import SolidProps as sp
-
-# Get thermal conductivity of Stainless Steel 304L at 290 K
-k = sp.get_K('SS304L', 290)
-print(f'Thermal conductivity: {k:.2f} W/(m.K)')
-
-# Get specific heat of Copper at 80 K
-cp = sp.get_cp('Cu', 80)
-print(f'Specific heat: {cp:.2f} J/(kg.K)')
-
-# Get density (temperature-independent)
-rho = sp.get_rhomass('Cu')
-print(f'Density: {rho:.2f} kg/m^3')
-```
-
-Available convenience functions:
-- `sp.get_K(material, T)` - thermal conductivity
-- `sp.get_cp(material, T)` - specific heat
-- `sp.get_cv(material, T)` - specific heat at constant volume
-- `sp.get_rhomass(material)` - density
-- `sp.get_thermal_expansion_coefficient(material, T)` - thermal expansion coefficient
-- `sp.get_thermal_diffusivity(material, T)` - thermal diffusivity
-- `sp.get_electrical_resistivity(material, T)` - electrical resistivity
-
-### Using the class directly
-
-When querying multiple properties of the same material, creating a `SolidProps` instance
-is more efficient since the data is loaded only once:
+Instantiate `SolidProps` with a material name, then call methods on the instance.
+The material data is loaded once at construction and reused across all queries.
 
 ```python
 from SolidProps import SolidProps
 
-# Create an instance for a specific material
 copper = SolidProps('Cu')
 
 T = 150  # temperature in Kelvin
@@ -109,7 +76,7 @@ print(f'Thermal diffusivity:  {copper.get_thermal_diffusivity(T):.2e} m^2/s')
 print(f'Resistivity:          {copper.get_electrical_resistivity(T):.2e} ohm.m')
 ```
 
-### Listing available materials
+Material names are case-insensitive. List the supported ones with:
 
 ```python
 from SolidProps import available_materials
@@ -117,10 +84,8 @@ from SolidProps import available_materials
 print(available_materials())
 ```
 
-### Temperature range
-
-All temperature-dependent properties are valid for temperatures from **1 K to 300 K**.
-Querying outside this range raises an error.
+All temperature-dependent properties are valid from **1 K to 300 K**;
+querying outside this range raises an error.
 
 ## API reference
 
